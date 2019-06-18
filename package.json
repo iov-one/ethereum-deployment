@@ -10,6 +10,7 @@
     "generate-contracts": "web3x-codegen",
     "postgenerate-contracts": "yarn format",
     "format": "prettier --write --loglevel warn \"./src/**/*.ts\"",
+    "lint": "eslint --max-warnings 0 \"**/*.{js,ts}\"",
     "build": "tsc"
   },
   "devDependencies": {
