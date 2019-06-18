@@ -6,3 +6,13 @@ dist/
 docs/
 generated/
 types/
+
+# Generated files
+src/AshToken.ts
+src/AshTokenAbi.ts
+src/AtomicSwapErc20.ts
+src/AtomicSwapErc20Abi.ts
+src/AtomicSwapEther.ts
+src/AtomicSwapEtherAbi.ts
+src/TrashToken.ts
+src/TrashTokenAbi.ts
