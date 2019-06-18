@@ -37,7 +37,7 @@ interface MintingJob {
   readonly quantity: string;
 }
 
-export async function main(args: ReadonlyArray<string>): Promise<void> {
+export async function main(args: readonly string[]): Promise<void> {
   const ganacheUrl = args[0];
 
   const provider = new WebsocketProvider(ganacheUrl);
@@ -46,7 +46,7 @@ export async function main(args: ReadonlyArray<string>): Promise<void> {
   const mintingJobs = new Array<MintingJob>();
 
   // Order matters to get reproducible contract addresses
-  const deploymentJobs: ReadonlyArray<DeploymentJob> = [
+  const deploymentJobs: readonly DeploymentJob[] = [
     { name: "AshToken", contract: new AshToken(eth) },
     { name: "TrashToken", contract: new TrashToken(eth) },
     { name: "AtomicSwapEther", contract: new AtomicSwapEther(eth) },
