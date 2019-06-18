@@ -30,6 +30,11 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
+"@types/abstract-leveldown@*":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@types/abstract-leveldown/-/abstract-leveldown-5.0.1.tgz#3c7750d0186b954c7f2d2f6acc8c3c7ba0c3412e"
+  integrity sha512-wYxU3kp5zItbxKmeRYCEplS2MW7DzyBnxPGj+GJVHZEUZiK/nn5Ei1sUFgURDh+X051+zsGe28iud3oHjrYWQQ==
+
 "@types/bn.js@^4.11.2":
   version "4.11.4"
   resolved "https://registry.yarnpkg.com/@types/bn.js/-/bn.js-4.11.4.tgz#a7bed5bdef9f16b25c92ba27745ab261374787d7"
@@ -46,6 +51,14 @@
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@types/events/-/events-3.0.0.tgz#2862f3f58a9a7f7c3e78d79f130dd4d71c25c2a7"
   integrity sha512-EaObqwIvayI5a8dCzhFrjKzVwKLxjoG9T6Ppd5CEo07LRKfQ8Yokw54r5+Wq7FaBQ+yXRvQAYPrHwya1/UFt9g==
+
+"@types/levelup@^3.1.0":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@types/levelup/-/levelup-3.1.1.tgz#f7cc08f248f14cb6c92914e91bceb8761020e8f0"
+  integrity sha512-LjvlfctJYj23Xuqq3jCT8ZPSUSSgDcRJg8+XFDBasoYzefFbB4cHzlDmBVjc2rBOYvklpYHJRayD0jBsbJLD9w==
+  dependencies:
+    "@types/abstract-leveldown" "*"
+    "@types/node" "*"
 
 "@types/node@*":
   version "11.11.6"
@@ -2903,12 +2916,13 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-web3x@^3.0.6:
-  version "3.0.6"
-  resolved "https://registry.yarnpkg.com/web3x/-/web3x-3.0.6.tgz#f782f6a92e59db6c69e0e2f45edd802b4b174655"
-  integrity sha512-yqBxa/0v3ZRGIHrKjILWdGH16z8egN8XeezLdFgkJkWJ3bXqarpoPDIkszs49U8HNa9D5AJXfNd6JVYDQjmg/Q==
+web3x@^3.0.11:
+  version "3.0.11"
+  resolved "https://registry.yarnpkg.com/web3x/-/web3x-3.0.11.tgz#93ca7b594f1a79580680035ea8066a263e3bbd6b"
+  integrity sha512-gzWAXrbeHtsLxU/aInhxyU8b9y6OKuP5+bOrchwFzjM00q60FIOBiebweon5s1g9WATt1045AlBhDf2naDGkNA==
   dependencies:
     "@types/bn.js" "^4.11.2"
+    "@types/levelup" "^3.1.0"
     "@types/node" "^10.12.18"
     "@types/ws" "^6.0.1"
     bigint-buffer "^1.1.2"
