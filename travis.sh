@@ -75,12 +75,6 @@ fold_start "docker-build"
 docker build -t "iov1/ethereum-deployment:${BUILD_VERSION}" .
 fold_end
 
-fold_start "docker-run-tests"
-docker run --read-only --rm "iov1/ethereum-deployment:${BUILD_VERSION}" version
-docker run --read-only --rm "iov1/ethereum-deployment:${BUILD_VERSION}" help
-docker run --read-only --rm "iov1/ethereum-deployment:${BUILD_VERSION}" generate bns some-test-chain-id
-fold_end
-
 fold_start "dockerhub-upload"
 if [[ "${TRAVIS_NODE_VERSION:-}" == "10" && "${TRAVIS_OS_NAME:-}" == "linux" ]]; then
   # only run in one job of the build matrix
